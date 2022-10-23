@@ -308,3 +308,17 @@ public static class  MyRecorderWriter extends RecordWriter<IntWritable, Text>{
 HDFS中得到的2008年的结果展示为：
 
 ![截图 2022-10-23 13-37-48](https://cdn.jsdelivr.net/gh/JohnAndresLee/websitepicture/%E6%88%AA%E5%9B%BE%202022-10-23%2013-37-48.png)
+
+## 可改进的部分
+
+1. 扩展性
+
+   设计问题二的思路时，本来打算将年份与单词组合成一个pair当做key，可是Hadoop框架的io并没有封装pair类型，因此采用了字符串拼接的方法完成了本题，也就导致了项目的可扩展性并不是很好，只能针对问题二这样特定要求的问题。
+
+2. 性能
+
+   程序的总体运行效率还是比较高的，模块划分的也比较清晰。但是在本项目中，我还是先对原始数据集进行了一定的数据预处理，以后的工作可以考虑在Hadoop代码框架中完成csv文件的直接读取和处理。
+
+3. maven框架的理解
+
+   目前对maven框架的理解还只是停留在会用上，对内部的机理并不清楚，以后可以认真学习了解。
