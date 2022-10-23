@@ -1,0 +1,8 @@
+wc/WordCount$MyOutputFormat.class
+wc/WordCount$TokenizerMapper.class
+wc/WordCount$IntSumReducer.class
+wc/WordCount.class
+wc/WordCount$CustomPartitioner.class
+wc/WordCount$TokenizerMapper$CountersEnum.class
+wc/WordCount$MyRecorderWriter.class
+wc/WordCount$IntWritableDecreasingComparator.class
